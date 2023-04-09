@@ -1,0 +1,24 @@
+---
+apiVersion: v1
+kind: pod
+metadata:
+  name: sai-nginx
+  labels:
+   name: sai-service
+spec:
+  containers:
+  - name: sainginx
+    image: nginx
+    ports:
+      - containerPort: 80
+---
+apiVersion: v1
+kind: service
+metadata:
+ name: my-service
+spec:
+  selectors: 
+  - name: sai-service
+  ports:
+   - protocal: TCP
+    port: 80
