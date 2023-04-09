@@ -7,9 +7,9 @@ metadata:
    name: sai-service
 spec:
   containers:
-  - name: sainginx
-    image: nginx
-    ports:
+   - name: sainginx
+     image: nginx
+     ports:
       - containerPort: 80
 ---
 apiVersion: v1
