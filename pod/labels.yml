@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: sai-pod-lable
+  labels:
+    course: docker
+    duration : 25hr
+    trainer: siva
+spec:
+  containers:
+   - image: nginx
+     name: sai-nginx
+     ports:
+     - containerPort: 80
+    

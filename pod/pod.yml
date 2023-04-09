@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: sai-pod
+spec:
+  containers:
+   - image: nginx
+     name: sai-nginx
+     ports:
+     - containerPort: 80
+    

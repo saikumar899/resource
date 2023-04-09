@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: sai-pod-multi
+spec:
+  containers:
+   - image: nginx
+     name: sai-nginx
+     ports:
+     - containerPort: 80
+   - image: almalinux
+     name: sai-almalinux
+     command: ["sleep","20"]

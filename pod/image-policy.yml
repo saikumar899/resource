@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: sai-pod-ipp
+spec:
+  containers:
+   - image: nginx
+     name: sai-nginx
+     imagePullPolicy: Always
+     ports:
+     - containerPort: 80
+    
