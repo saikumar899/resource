@@ -2,12 +2,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: sai-nginx
+  name: pod-nginx
   labels:
-   name: sai-service
+    name: service-nginx
 spec:
- - containers:
-   - name: sainginx
+  containers:
+   - name: nginx
      image: nginx
      ports:
       - containerPort: 80
@@ -15,10 +15,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
- name: my-service
+  name: nginx-service
 spec:
-  selectors: 
-  - name: sai-service
+  selector:
+    server: service-nginx
   ports:
-   - protocal: TCP
-    port: 80
+    - protocol: TCP
+      port: 80
+      
