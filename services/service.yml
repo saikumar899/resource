@@ -6,7 +6,7 @@ metadata:
   labels:
    name: sai-service
 spec:
-  containers:
+ - containers:
    - name: sainginx
      image: nginx
      ports:
